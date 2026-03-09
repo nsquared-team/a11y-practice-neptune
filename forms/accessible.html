@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/home/accessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/home/accessible.html">Home</a></li>
+          <li><a href="/forms/accessible.html" aria-current="page">Forms</a></li>
+          <li><a href="/navigation/accessible.html">Navigation</a></li>
+          <li><a href="/dialogs/accessible.html">Dialogs</a></li>
+          <li><a href="/data/accessible.html">Data</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container container--narrow">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Plan Your Neptune Mission</h1>
+        <p>Complete the registration form to join an upcoming research mission to the Neptune system. All required fields are marked with an asterisk.</p>
+      </div>
+
+      <form id="mission-form" novalidate>
+        <!-- Text Inputs -->
+        <div class="form-group">
+          <label for="astronaut-name" class="form-label">
+            Full Name <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input type="text" id="astronaut-name" class="form-input" required aria-required="true" autocomplete="name" placeholder="e.g., Dr. Jane Carter">
+          <div class="form-error" id="name-error" role="alert" aria-live="assertive" hidden></div>
+        </div>
+
+        <div class="form-group">
+          <label for="mission-code" class="form-label">Mission Code</label>
+          <input type="text" id="mission-code" class="form-input" placeholder="e.g., NPT-2026-ALPHA">
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">
+            Email Address <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input type="email" id="email" class="form-input" required aria-required="true" autocomplete="email" placeholder="you@example.com">
+          <div class="form-error" id="email-error" role="alert" aria-live="assertive" hidden></div>
+        </div>
+
+        <!-- Radio Buttons -->
+        <fieldset class="form-fieldset">
+          <legend>Mission Role <span class="required" aria-hidden="true">*</span></legend>
+          <div class="form-check">
+            <input type="radio" id="role-pilot" name="role" value="pilot" required>
+            <label for="role-pilot">Pilot</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="role-scientist" name="role" value="scientist">
+            <label for="role-scientist">Scientist</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="role-engineer" name="role" value="engineer">
+            <label for="role-engineer">Engineer</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="role-commander" name="role" value="commander">
+            <label for="role-commander">Commander</label>
+          </div>
+        </fieldset>
+
+        <!-- Checkboxes -->
+        <fieldset class="form-fieldset">
+          <legend>Equipment Selection</legend>
+          <div class="form-check">
+            <input type="checkbox" id="equip-suit" name="equipment" value="suit">
+            <label for="equip-suit">Space Suit (EVA-rated)</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="equip-comm" name="equipment" value="comm">
+            <label for="equip-comm">Communications Array</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="equip-telescope" name="equipment" value="telescope">
+            <label for="equip-telescope">Deep-Space Telescope</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="equip-spectrometer" name="equipment" value="spectrometer">
+            <label for="equip-spectrometer">Mass Spectrometer</label>
+          </div>
+        </fieldset>
+
+        <!-- Select / Dropdown -->
+        <div class="form-group">
+          <label for="launch-site" class="form-label">
+            Launch Site <span class="required" aria-hidden="true">*</span>
+          </label>
+          <select id="launch-site" class="form-select" required aria-required="true">
+            <option value="">Select a launch site...</option>
+            <option value="ksc">Kennedy Space Center, USA</option>
+            <option value="baikonur">Baikonur Cosmodrome, Kazakhstan</option>
+            <option value="tanegashima">Tanegashima Space Center, Japan</option>
+            <option value="kourou">Guiana Space Centre, French Guiana</option>
+          </select>
+        </div>
+
+        <!-- Combobox / Autocomplete -->
+        <div class="form-group">
+          <label for="destination-moon" class="form-label">Destination Moon</label>
+          <div class="combobox-wrapper" data-combobox>
+            <input type="text" id="destination-moon" class="form-input"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="moon-listbox"
+              placeholder="Type to search moons...">
+            <ul id="moon-listbox" class="combobox-listbox" role="listbox" aria-label="Neptune moons">
+              <li role="option" id="moon-triton" class="combobox-option">Triton</li>
+              <li role="option" id="moon-nereid" class="combobox-option">Nereid</li>
+              <li role="option" id="moon-proteus" class="combobox-option">Proteus</li>
+              <li role="option" id="moon-larissa" class="combobox-option">Larissa</li>
+              <li role="option" id="moon-galatea" class="combobox-option">Galatea</li>
+              <li role="option" id="moon-despina" class="combobox-option">Despina</li>
+              <li role="option" id="moon-thalassa" class="combobox-option">Thalassa</li>
+              <li role="option" id="moon-naiad" class="combobox-option">Naiad</li>
+              <li role="option" id="moon-hippocamp" class="combobox-option">Hippocamp</li>
+              <li role="option" id="moon-halimede" class="combobox-option">Halimede</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label for="notes" class="form-label">Mission Notes</label>
+          <textarea id="notes" class="form-textarea" rows="4" placeholder="Any additional notes about your mission preferences..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="btn-group" style="margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+          <button type="reset" class="btn btn-secondary">Reset Form</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </footer>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/components/combobox.js"></script>
+  <script>
+    // Form validation
+    document.getElementById('mission-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+      const name = document.getElementById('astronaut-name');
+      const nameError = document.getElementById('name-error');
+      const email = document.getElementById('email');
+      const emailError = document.getElementById('email-error');
+
+      // Reset
+      nameError.hidden = true;
+      emailError.hidden = true;
+      name.classList.remove('is-invalid');
+      email.classList.remove('is-invalid');
+      name.removeAttribute('aria-invalid');
+      email.removeAttribute('aria-invalid');
+
+      if (!name.value.trim()) {
+        name.classList.add('is-invalid');
+        name.setAttribute('aria-invalid', 'true');
+        name.setAttribute('aria-describedby', 'name-error');
+        nameError.textContent = 'Please enter your full name.';
+        nameError.hidden = false;
+        valid = false;
+      }
+
+      if (!email.value.trim() || !email.value.includes('@')) {
+        email.classList.add('is-invalid');
+        email.setAttribute('aria-invalid', 'true');
+        email.setAttribute('aria-describedby', 'email-error');
+        emailError.textContent = 'Please enter a valid email address.';
+        emailError.hidden = false;
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Mission registration submitted successfully! Prepare for launch.');
+      } else {
+        // Focus the first invalid field
+        var firstInvalid = this.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+      }
+    });
+  </script>
+</body>
+</html>

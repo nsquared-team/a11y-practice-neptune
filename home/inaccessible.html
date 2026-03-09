@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+  <style>
+    /* Suppress focus indicators */
+    *:focus, *:focus-visible { outline: none !important; box-shadow: none !important; }
+    /* Re-enable for version switcher */
+    .version-banner a:focus-visible { outline: 2px solid currentColor !important; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <!-- No skip link -->
+
+  <!-- Header: no <header> landmark, no <nav>, no aria-current, but uses <a> tags so links are tabbable -->
+  <div style="background: var(--color-neptune-surface); border-bottom: 1px solid var(--color-card-border); padding: 1rem 0; position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+      <a href="/home/inaccessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <div class="main-nav">
+        <ul>
+          <li><a href="/home/inaccessible.html" style="color: var(--color-text-primary); background: rgba(126, 184, 255, 0.1); border-radius: var(--radius-md);">Home</a></li>
+          <li><a href="/forms/inaccessible.html">Forms</a></li>
+          <li><a href="/navigation/inaccessible.html">Navigation</a></li>
+          <li><a href="/dialogs/inaccessible.html">Dialogs</a></li>
+          <li><a href="/data/inaccessible.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="hero">
+      <div class="container">
+        <h1>The Farthest Giant</h1>
+        <p>Welcome to Neptune Observatory — your gateway to exploring the mysteries of the solar system's most distant planet. Discover the storms, moons, and rings of this ice giant world.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <!-- div buttons: tabbable via tabindex but wrong role, no Enter/Space activation -->
+          <div class="btn btn-primary" tabindex="0" onclick="alert('Mission planner coming soon!')">Start Exploring</div>
+          <div class="btn btn-secondary" tabindex="0" onclick="alert('Subscribed!')">Subscribe to Updates</div>
+        </div>
+        <div class="hero-image">
+          <img src="/images/neptune-hero.webp" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Discoveries</h2>
+          <p>Explore the latest findings from Neptune research and observation programs.</p>
+        </div>
+
+        <div class="card-grid">
+          <!-- Cards: tabbable divs but no link role, no accessible name, click-only -->
+          <div class="card" tabindex="0" onclick="location='/data/inaccessible.html'" style="cursor: pointer;">
+            <img src="/images/triton.webp" alt="" class="card-image">
+            <div class="card-body">
+              <h3>Triton: A Captured World</h3>
+              <p>Neptune's largest moon orbits in a retrograde direction, suggesting it was captured from the Kuiper Belt billions of years ago.</p>
+            </div>
+          </div>
+
+          <div class="card" tabindex="0" onclick="location='/data/inaccessible.html'" style="cursor: pointer;">
+            <img src="/images/great-dark-spot.webp" alt="" class="card-image">
+            <div class="card-body">
+              <h3>The Great Dark Spot</h3>
+              <p>Similar to Jupiter's Great Red Spot, Neptune's storm system was first observed by Voyager 2 in 1989 and has since disappeared and reappeared.</p>
+            </div>
+          </div>
+
+          <div class="card" tabindex="0" onclick="location='/data/inaccessible.html'" style="cursor: pointer;">
+            <img src="/images/rings.webp" alt="" class="card-image">
+            <div class="card-body">
+              <h3>Neptune's Ring System</h3>
+              <p>Five main rings composed of ice particles and silicates orbit Neptune, with unusual clumps called ring arcs in the Adams ring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Quick Facts</h2>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h3>Distance from Sun</h3>
+              <p>4.5 billion km (30.07 AU) — light takes over 4 hours to travel from the Sun to Neptune.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3>Orbital Period</h3>
+              <p>164.8 Earth years — Neptune has completed just one orbit since its discovery in 1846.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3>Wind Speeds</h3>
+              <p>Up to 2,100 km/h — the fastest winds in the solar system have been measured on Neptune.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get Involved</h2>
+          <p>Join our community of Neptune enthusiasts and researchers.</p>
+        </div>
+
+        <div class="btn-group">
+          <div class="btn btn-primary" tabindex="0" onclick="alert('Thank you for volunteering!')">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+            Volunteer for Research
+          </div>
+          <div class="btn btn-secondary" tabindex="0" onclick="alert('Newsletter signup coming soon!')">Join Newsletter</div>
+          <!-- Icon buttons: tabbable but no aria-label, no role -->
+          <div class="btn-icon" tabindex="0" onclick="alert('Share dialog coming soon!')" style="cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 7a3 3 0 100-6 3 3 0 000 6zM5 13a3 3 0 100-6 3 3 0 000 6zM15 19a3 3 0 100-6 3 3 0 000 6zM7.5 11.5l5-3M7.5 8.5l5 3"/></svg>
+          </div>
+          <div class="btn-icon" tabindex="0" onclick="alert('Page bookmarked!')" style="cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h10a1 1 0 011 1v14l-6-3-6 3V4a1 1 0 011-1z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--color-neptune-surface); border-top: 1px solid var(--color-card-border); padding: 2rem 0; margin-top: 4rem; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </div>
+
+  <script src="/js/version-switcher.js"></script>
+</body>
+</html>

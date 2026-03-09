@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialogs — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+  <style>
+    *:focus, *:focus-visible { outline: none !important; box-shadow: none !important; }
+    .version-banner a:focus-visible { outline: 2px solid currentColor !important; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <!-- No skip link -->
+
+  <div style="background: var(--color-neptune-surface); border-bottom: 1px solid var(--color-card-border); padding: 1rem 0; position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+      <a href="/home/inaccessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <div class="main-nav">
+        <ul>
+          <li><a href="/home/inaccessible.html">Home</a></li>
+          <li><a href="/forms/inaccessible.html">Forms</a></li>
+          <li><a href="/navigation/inaccessible.html">Navigation</a></li>
+          <li><a href="/dialogs/inaccessible.html" style="color: var(--color-text-primary); background: rgba(126, 184, 255, 0.1); border-radius: var(--radius-md);">Dialogs</a></li>
+          <li><a href="/data/inaccessible.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container" style="padding-top: 3rem; padding-bottom: 3rem; min-height: 60vh;">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Neptune Image Gallery</h1>
+        <p>Browse stunning images of Neptune captured by Voyager 2, Hubble, and JWST. Click any image to view details, or schedule an observation session.</p>
+      </div>
+
+      <!-- Gallery — tabbable divs (no button role, no accessible name), click-only -->
+      <div class="section">
+        <h2>Featured Images</h2>
+
+        <div class="gallery-grid" style="margin-top: 1.5rem;">
+          <div class="gallery-item" tabindex="0" onclick="openFakeModal('fake-image-modal-1')" style="cursor: pointer;">
+            <img src="/images/neptune-hero.webp" alt="">
+          </div>
+          <div class="gallery-item" tabindex="0" onclick="openFakeModal('fake-image-modal-2')" style="cursor: pointer;">
+            <img src="/images/triton.webp" alt="">
+          </div>
+          <div class="gallery-item" tabindex="0" onclick="openFakeModal('fake-image-modal-3')" style="cursor: pointer;">
+            <img src="/images/great-dark-spot.webp" alt="">
+          </div>
+          <div class="gallery-item" tabindex="0" onclick="openFakeModal('fake-image-modal-4')" style="cursor: pointer;">
+            <img src="/images/rings.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule Button — tabbable div, click-only -->
+      <div class="section">
+        <h2>Schedule an Observation</h2>
+        <p>Plan your telescope time to observe Neptune. Select a date and provide your details.</p>
+        <div class="btn btn-primary" tabindex="0" onclick="openFakeModal('fake-schedule-modal')" style="margin-top: 1rem; cursor: pointer;">
+          Schedule Observation
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 1 — no role="dialog", no focus trap, no Escape, no focus return -->
+    <div class="modal-backdrop" id="fake-image-modal-1">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Neptune from Voyager 2</h2>
+          <span class="modal-close" tabindex="0" onclick="closeFakeModal('fake-image-modal-1')" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="/images/neptune-hero.webp" alt="" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>This iconic image of Neptune was captured by Voyager 2 on August 20, 1989, from a distance of approximately 7.1 million kilometers.</p>
+          <p><strong>Camera:</strong> Narrow-angle camera<br>
+          <strong>Date:</strong> August 20, 1989<br>
+          <strong>Distance:</strong> 7.1 million km</p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-secondary" tabindex="0" onclick="closeFakeModal('fake-image-modal-1')" style="cursor: pointer;">Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-backdrop" id="fake-image-modal-2">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Triton's Surface</h2>
+          <span class="modal-close" tabindex="0" onclick="closeFakeModal('fake-image-modal-2')" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="/images/triton.webp" alt="" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>Triton displays a remarkably varied surface including the "cantaloupe terrain" — a unique pattern found nowhere else in the solar system.</p>
+          <p><strong>Surface temperature:</strong> -235°C (38 K)<br>
+          <strong>Diameter:</strong> 2,707 km<br>
+          <strong>Orbital direction:</strong> Retrograde</p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-secondary" tabindex="0" onclick="closeFakeModal('fake-image-modal-2')" style="cursor: pointer;">Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-backdrop" id="fake-image-modal-3">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>The Great Dark Spot</h2>
+          <span class="modal-close" tabindex="0" onclick="closeFakeModal('fake-image-modal-3')" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="/images/great-dark-spot.webp" alt="" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>The Great Dark Spot was an Earth-sized storm system observed by Voyager 2, with wind speeds up to 2,400 km/h.</p>
+          <p><strong>Size:</strong> ~13,000 × 6,600 km<br>
+          <strong>Wind speed:</strong> Up to 2,400 km/h<br>
+          <strong>Status:</strong> Disappeared by 1994</p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-secondary" tabindex="0" onclick="closeFakeModal('fake-image-modal-3')" style="cursor: pointer;">Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-backdrop" id="fake-image-modal-4">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Neptune's Ring System</h2>
+          <span class="modal-close" tabindex="0" onclick="closeFakeModal('fake-image-modal-4')" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="/images/rings.webp" alt="" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>Neptune has five known rings. The Adams ring contains bright ring arcs — concentrated clumps of material.</p>
+          <p><strong>Number of rings:</strong> 5 main rings<br>
+          <strong>Composition:</strong> Ice particles and silicates<br>
+          <strong>Notable feature:</strong> Ring arcs in Adams ring</p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-secondary" tabindex="0" onclick="closeFakeModal('fake-image-modal-4')" style="cursor: pointer;">Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule Modal with inaccessible date picker — no role, no focus trap, no Escape -->
+    <div class="modal-backdrop" id="fake-schedule-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Schedule Observation</h2>
+          <span class="modal-close" tabindex="0" onclick="closeFakeModal('fake-schedule-modal')" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.5rem;">Observer Name</div>
+            <input type="text" class="form-input" placeholder="Your name">
+          </div>
+
+          <div class="form-group">
+            <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.5rem;">Observation Date</div>
+            <input type="text" id="fake-observation-date" class="form-input" placeholder="Select a date..." readonly>
+          </div>
+
+          <!-- Inaccessible Date Picker — no grid role, click-only days, no keyboard nav -->
+          <div class="date-picker" data-fake-datepicker="fake-observation-date" style="margin-top: 0.5rem;">
+            <div class="date-picker-header">
+              <span class="date-picker-nav" data-prev tabindex="0" style="cursor: pointer;">&#8249;</span>
+              <span class="date-picker-title"></span>
+              <span class="date-picker-nav" data-next tabindex="0" style="cursor: pointer;">&#8250;</span>
+            </div>
+            <table class="date-picker-grid">
+              <tr>
+                <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+              </tr>
+            </table>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.5rem;">Notes</div>
+            <textarea class="form-textarea" rows="3" placeholder="Target objects, equipment needed, etc."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="btn btn-secondary" tabindex="0" onclick="closeFakeModal('fake-schedule-modal')" style="cursor: pointer;">Cancel</div>
+          <div class="btn btn-primary" tabindex="0" onclick="alert('Observation scheduled!'); closeFakeModal('fake-schedule-modal')" style="cursor: pointer;">Confirm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--color-neptune-surface); border-top: 1px solid var(--color-card-border); padding: 2rem 0; margin-top: 4rem; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </div>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/inaccessible/modal.js"></script>
+  <script src="/js/inaccessible/date-picker.js"></script>
+</body>
+</html>

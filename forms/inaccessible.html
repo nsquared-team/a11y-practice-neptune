@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+  <style>
+    *:focus, *:focus-visible { outline: none !important; box-shadow: none !important; }
+    .version-banner a:focus-visible { outline: 2px solid currentColor !important; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <!-- No skip link -->
+
+  <div style="background: var(--color-neptune-surface); border-bottom: 1px solid var(--color-card-border); padding: 1rem 0; position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+      <a href="/home/inaccessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <div class="main-nav">
+        <ul>
+          <li><a href="/home/inaccessible.html">Home</a></li>
+          <li><a href="/forms/inaccessible.html" style="color: var(--color-text-primary); background: rgba(126, 184, 255, 0.1); border-radius: var(--radius-md);">Forms</a></li>
+          <li><a href="/navigation/inaccessible.html">Navigation</a></li>
+          <li><a href="/dialogs/inaccessible.html">Dialogs</a></li>
+          <li><a href="/data/inaccessible.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container container--narrow" style="padding-top: 3rem; padding-bottom: 3rem; min-height: 60vh;">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Plan Your Neptune Mission</h1>
+        <p>Complete the registration form to join an upcoming research mission to the Neptune system. All required fields are marked with an asterisk.</p>
+      </div>
+
+      <div id="mission-form-fake">
+        <!-- Text Inputs — placeholder only, no <label> elements -->
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Full Name *">
+          <div class="form-error" style="display: none;"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Mission Code">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Email Address *">
+          <div class="form-error" style="display: none;"></div>
+        </div>
+
+        <!-- Fake Radio Buttons — tabbable divs, click-only toggle, no role, no arrow keys, no fieldset/legend -->
+        <div style="border: 1px solid var(--color-card-border); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.75rem;">Mission Role *</div>
+          <div class="form-check" tabindex="0" onclick="selectFakeRadio(this, 'role')">
+            <div class="fake-radio" data-group="role"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Pilot</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="selectFakeRadio(this, 'role')">
+            <div class="fake-radio" data-group="role"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Scientist</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="selectFakeRadio(this, 'role')">
+            <div class="fake-radio" data-group="role"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Engineer</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="selectFakeRadio(this, 'role')">
+            <div class="fake-radio" data-group="role"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Commander</span>
+          </div>
+        </div>
+
+        <!-- Fake Checkboxes — tabbable divs, click-only toggle -->
+        <div style="border: 1px solid var(--color-card-border); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.75rem;">Equipment Selection</div>
+          <div class="form-check" tabindex="0" onclick="toggleFakeCheckbox(this)">
+            <div class="fake-checkbox"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Space Suit (EVA-rated)</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="toggleFakeCheckbox(this)">
+            <div class="fake-checkbox"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Communications Array</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="toggleFakeCheckbox(this)">
+            <div class="fake-checkbox"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Deep-Space Telescope</span>
+          </div>
+          <div class="form-check" tabindex="0" onclick="toggleFakeCheckbox(this)">
+            <div class="fake-checkbox"></div>
+            <span style="font-size: 0.9375rem; color: var(--color-text-secondary);">Mass Spectrometer</span>
+          </div>
+        </div>
+
+        <!-- Fake Select — tabbable div trigger, click-only dropdown -->
+        <div class="form-group">
+          <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.5rem;">Launch Site *</div>
+          <div class="fake-select" data-fake-select>
+            <div class="fake-select-trigger" tabindex="0" onclick="toggleFakeSelect(this)">
+              <span>Select a launch site...</span>
+            </div>
+            <div class="fake-select-dropdown">
+              <div class="fake-select-option" onclick="selectFakeOption(this)">Kennedy Space Center, USA</div>
+              <div class="fake-select-option" onclick="selectFakeOption(this)">Baikonur Cosmodrome, Kazakhstan</div>
+              <div class="fake-select-option" onclick="selectFakeOption(this)">Tanegashima Space Center, Japan</div>
+              <div class="fake-select-option" onclick="selectFakeOption(this)">Guiana Space Centre, French Guiana</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fake Combobox — no ARIA, mouse-only option selection -->
+        <div class="form-group">
+          <div style="font-weight: 600; font-size: 0.9375rem; color: var(--color-text-primary); margin-bottom: 0.5rem;">Destination Moon</div>
+          <div class="combobox-wrapper" data-fake-combobox>
+            <input type="text" class="form-input" placeholder="Type to search moons...">
+            <div class="combobox-listbox">
+              <div class="combobox-option">Triton</div>
+              <div class="combobox-option">Nereid</div>
+              <div class="combobox-option">Proteus</div>
+              <div class="combobox-option">Larissa</div>
+              <div class="combobox-option">Galatea</div>
+              <div class="combobox-option">Despina</div>
+              <div class="combobox-option">Thalassa</div>
+              <div class="combobox-option">Naiad</div>
+              <div class="combobox-option">Hippocamp</div>
+              <div class="combobox-option">Halimede</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textarea — no label -->
+        <div class="form-group">
+          <textarea class="form-textarea" rows="4" placeholder="Mission Notes"></textarea>
+        </div>
+
+        <!-- Submit — tabbable divs, click-only -->
+        <div class="btn-group" style="margin-top: 2rem;">
+          <div class="btn btn-primary" tabindex="0" onclick="submitFakeForm()">Submit Registration</div>
+          <div class="btn btn-secondary" tabindex="0" onclick="resetFakeForm()">Reset Form</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--color-neptune-surface); border-top: 1px solid var(--color-card-border); padding: 2rem 0; margin-top: 4rem; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </div>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/inaccessible/combobox.js"></script>
+  <script>
+    function selectFakeRadio(el, group) {
+      document.querySelectorAll('.fake-radio[data-group="' + group + '"]').forEach(function(r) {
+        r.classList.remove('selected');
+      });
+      el.querySelector('.fake-radio').classList.add('selected');
+    }
+
+    function toggleFakeCheckbox(el) {
+      el.querySelector('.fake-checkbox').classList.toggle('selected');
+    }
+
+    function toggleFakeSelect(trigger) {
+      var dropdown = trigger.nextElementSibling;
+      dropdown.classList.toggle('open');
+    }
+
+    function selectFakeOption(el) {
+      var trigger = el.parentElement.previousElementSibling;
+      trigger.querySelector('span').textContent = el.textContent;
+      el.parentElement.classList.remove('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('[data-fake-select]')) {
+        document.querySelectorAll('.fake-select-dropdown').forEach(function(d) {
+          d.classList.remove('open');
+        });
+      }
+    });
+
+    function submitFakeForm() {
+      var inputs = document.querySelectorAll('#mission-form-fake .form-input');
+      var nameVal = inputs[0].value.trim();
+      var emailVal = inputs[2].value.trim();
+      var errors = document.querySelectorAll('#mission-form-fake .form-error');
+
+      errors.forEach(function(e) { e.style.display = 'none'; });
+      inputs[0].classList.remove('is-invalid');
+      inputs[2].classList.remove('is-invalid');
+
+      var valid = true;
+
+      if (!nameVal) {
+        inputs[0].classList.add('is-invalid');
+        errors[0].textContent = 'Please enter your full name.';
+        errors[0].style.display = 'block';
+        valid = false;
+      }
+
+      if (!emailVal || !emailVal.includes('@')) {
+        inputs[2].classList.add('is-invalid');
+        errors[1].textContent = 'Please enter a valid email address.';
+        errors[1].style.display = 'block';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Mission registration submitted successfully! Prepare for launch.');
+      }
+    }
+
+    function resetFakeForm() {
+      document.querySelectorAll('#mission-form-fake .form-input, #mission-form-fake .form-textarea').forEach(function(el) {
+        el.value = '';
+        el.classList.remove('is-invalid');
+      });
+      document.querySelectorAll('.fake-radio, .fake-checkbox').forEach(function(el) {
+        el.classList.remove('selected');
+      });
+      document.querySelectorAll('.form-error').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      document.querySelector('.fake-select-trigger span').textContent = 'Select a launch site...';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/home/accessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/home/accessible.html">Home</a></li>
+          <li><a href="/forms/accessible.html">Forms</a></li>
+          <li><a href="/navigation/accessible.html" aria-current="page">Navigation</a></li>
+          <li><a href="/dialogs/accessible.html">Dialogs</a></li>
+          <li><a href="/data/accessible.html">Data</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Neptune Research Archives</h1>
+        <p>Browse our collection of research materials organized by topic. Use the navigation menus below to explore different research categories.</p>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" style="margin-bottom: 2rem;">
+        <ol class="breadcrumb">
+          <li><a href="/home/accessible.html">Home</a></li>
+          <li><span class="breadcrumb-separator" aria-hidden="true">/</span></li>
+          <li><a href="/navigation/accessible.html" aria-current="page">Research Archives</a></li>
+        </ol>
+      </nav>
+
+      <!-- Disclosure Navigation Menu Bar -->
+      <section class="section" aria-labelledby="research-nav-heading">
+        <h2 id="research-nav-heading">Research Categories</h2>
+        <p>Explore research organized by topic area. Open each category to see available articles.</p>
+
+        <nav aria-label="Research categories" style="margin-top: 1.5rem;">
+          <div class="disclosure-nav">
+            <div class="disclosure-menu" data-disclosure>
+              <button class="disclosure-trigger" aria-expanded="false" aria-controls="menu-atmosphere">
+                Atmosphere
+                <span class="disclosure-trigger-icon" aria-hidden="true">▾</span>
+              </button>
+              <div class="disclosure-panel" id="menu-atmosphere">
+                <a href="#">Cloud Layers & Composition</a>
+                <a href="#">Wind Speed Measurements</a>
+                <a href="#">The Great Dark Spot</a>
+                <a href="#">Methane Absorption Bands</a>
+                <a href="#">Atmospheric Temperature Profile</a>
+              </div>
+            </div>
+
+            <div class="disclosure-menu" data-disclosure>
+              <button class="disclosure-trigger" aria-expanded="false" aria-controls="menu-moons">
+                Moons
+                <span class="disclosure-trigger-icon" aria-hidden="true">▾</span>
+              </button>
+              <div class="disclosure-panel" id="menu-moons">
+                <a href="#">Triton Overview</a>
+                <a href="#">Triton's Geysers</a>
+                <a href="#">Nereid's Eccentric Orbit</a>
+                <a href="#">Inner Moons: Proteus to Naiad</a>
+                <a href="#">Irregular Satellites</a>
+              </div>
+            </div>
+
+            <div class="disclosure-menu" data-disclosure>
+              <button class="disclosure-trigger" aria-expanded="false" aria-controls="menu-rings">
+                Rings
+                <span class="disclosure-trigger-icon" aria-hidden="true">▾</span>
+              </button>
+              <div class="disclosure-panel" id="menu-rings">
+                <a href="#">Adams Ring & Arcs</a>
+                <a href="#">Le Verrier Ring</a>
+                <a href="#">Galle Ring</a>
+                <a href="#">Ring Composition Analysis</a>
+              </div>
+            </div>
+
+            <div class="disclosure-menu" data-disclosure>
+              <button class="disclosure-trigger" aria-expanded="false" aria-controls="menu-missions">
+                Missions
+                <span class="disclosure-trigger-icon" aria-hidden="true">▾</span>
+              </button>
+              <div class="disclosure-panel" id="menu-missions">
+                <a href="#">Voyager 2 Flyby (1989)</a>
+                <a href="#">Hubble Observations</a>
+                <a href="#">JWST Discoveries</a>
+                <a href="#">Proposed Future Missions</a>
+              </div>
+            </div>
+
+            <div class="disclosure-menu" data-disclosure>
+              <button class="disclosure-trigger" aria-expanded="false" aria-controls="menu-gallery">
+                Gallery
+                <span class="disclosure-trigger-icon" aria-hidden="true">▾</span>
+              </button>
+              <div class="disclosure-panel" id="menu-gallery">
+                <a href="#">Voyager 2 Images</a>
+                <a href="#">Hubble Telescope Photos</a>
+                <a href="#">JWST Infrared Views</a>
+                <a href="#">Artist Renderings</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Two-column layout with sidebar -->
+      <div class="layout-sidebar" style="margin-top: 3rem;">
+        <aside>
+          <nav class="sidebar-nav" aria-label="Atmosphere research">
+            <div class="sidebar-nav-heading">Atmosphere</div>
+            <a href="#" aria-current="page">Cloud Layers & Composition</a>
+            <a href="#">Wind Speed Measurements</a>
+            <a href="#">The Great Dark Spot</a>
+            <a href="#">Methane Absorption Bands</a>
+            <a href="#">Atmospheric Temperature Profile</a>
+
+            <div class="sidebar-nav-heading" style="margin-top: 1rem;">Related Topics</div>
+            <a href="#">Interior Structure</a>
+            <a href="#">Magnetic Field</a>
+            <a href="#">Seasonal Changes</a>
+          </nav>
+        </aside>
+
+        <article>
+          <h2>Cloud Layers & Composition</h2>
+          <p>Neptune's atmosphere is composed primarily of hydrogen and helium, with traces of methane that give the planet its distinctive blue color. The atmosphere can be divided into several distinct layers, each with unique characteristics.</p>
+          <p>The uppermost cloud deck, composed of methane ice crystals, sits at pressures around 1-2 bar. Below this lies a layer of hydrogen sulfide and ammonia clouds. The deepest visible cloud layer likely consists of water ice and ammonia.</p>
+
+          <h3>Upper Atmosphere</h3>
+          <p>The thermosphere of Neptune reaches temperatures of approximately 750 K, far higher than can be explained by solar heating alone. This "energy crisis" remains one of the planet's enduring mysteries.</p>
+          <p>Methane in the upper atmosphere absorbs red light from the Sun, contributing to Neptune's blue appearance. At the same time, it undergoes photochemical reactions that produce a haze of hydrocarbon compounds.</p>
+
+          <h3>Troposphere</h3>
+          <p>The troposphere is Neptune's lowest atmospheric layer, where weather phenomena occur. Temperatures decrease with altitude in this region, from about 72 K at the 1-bar level to approximately 50 K at the tropopause.</p>
+          <p>Some of the most powerful storms in the solar system form in Neptune's troposphere. Wind speeds can exceed 2,100 km/h, making them the fastest measured on any planet.</p>
+
+          <h3>Key Findings</h3>
+          <ul style="color: var(--color-text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
+            <li>Methane concentration: approximately 2% in the upper atmosphere</li>
+            <li>Cloud top temperature: ~55 K (-218°C)</li>
+            <li>Atmospheric pressure at cloud tops: ~1 bar</li>
+            <li>Primary blue coloring agent: methane absorption of red wavelengths</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </footer>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/components/disclosure-menu.js"></script>
+</body>
+</html>

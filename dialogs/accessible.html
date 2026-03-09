@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialogs — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/home/accessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/home/accessible.html">Home</a></li>
+          <li><a href="/forms/accessible.html">Forms</a></li>
+          <li><a href="/navigation/accessible.html">Navigation</a></li>
+          <li><a href="/dialogs/accessible.html" aria-current="page">Dialogs</a></li>
+          <li><a href="/data/accessible.html">Data</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Neptune Image Gallery</h1>
+        <p>Browse stunning images of Neptune captured by Voyager 2, Hubble, and JWST. Click any image to view details, or schedule an observation session.</p>
+      </div>
+
+      <!-- Gallery -->
+      <section class="section" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Featured Images</h2>
+
+        <div class="gallery-grid" style="margin-top: 1.5rem;">
+          <button type="button" class="gallery-item" id="gallery-btn-1" onclick="openModal('image-modal', 'gallery-btn-1')" aria-label="View details: Neptune from Voyager 2">
+            <img src="/images/neptune-hero.webp" alt="Neptune's blue disc showing atmospheric bands and clouds">
+          </button>
+          <button type="button" class="gallery-item" id="gallery-btn-2" onclick="openModal('image-modal-2', 'gallery-btn-2')" aria-label="View details: Triton surface">
+            <img src="/images/triton.webp" alt="Triton's icy surface with pinkish nitrogen ice">
+          </button>
+          <button type="button" class="gallery-item" id="gallery-btn-3" onclick="openModal('image-modal-3', 'gallery-btn-3')" aria-label="View details: Great Dark Spot">
+            <img src="/images/great-dark-spot.webp" alt="The Great Dark Spot storm system on Neptune">
+          </button>
+          <button type="button" class="gallery-item" id="gallery-btn-4" onclick="openModal('image-modal-4', 'gallery-btn-4')" aria-label="View details: Neptune's rings">
+            <img src="/images/rings.webp" alt="Neptune's faint ring system illuminated by the Sun">
+          </button>
+        </div>
+      </section>
+
+      <!-- Schedule Observation Button -->
+      <section class="section" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Schedule an Observation</h2>
+        <p>Plan your telescope time to observe Neptune. Select a date and provide your details.</p>
+        <button type="button" class="btn btn-primary" id="schedule-btn" onclick="openModal('schedule-modal', 'schedule-btn')" style="margin-top: 1rem;">
+          Schedule Observation
+        </button>
+      </section>
+    </div>
+
+    <!-- Image Detail Modal 1 -->
+    <div class="modal-backdrop" id="image-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-1">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title-1">Neptune from Voyager 2</h2>
+          <button type="button" class="modal-close" onclick="closeModal('image-modal')" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img src="/images/neptune-hero.webp" alt="Full-resolution view of Neptune captured during Voyager 2's 1989 flyby" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>This iconic image of Neptune was captured by Voyager 2 on August 20, 1989, from a distance of approximately 7.1 million kilometers. The image reveals Neptune's vibrant blue color, caused by methane absorption of red wavelengths in the atmosphere.</p>
+          <p><strong>Camera:</strong> Narrow-angle camera<br>
+          <strong>Date:</strong> August 20, 1989<br>
+          <strong>Distance:</strong> 7.1 million km</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('image-modal')">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Detail Modal 2 -->
+    <div class="modal-backdrop" id="image-modal-2" role="dialog" aria-modal="true" aria-labelledby="modal-title-2">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title-2">Triton's Surface</h2>
+          <button type="button" class="modal-close" onclick="closeModal('image-modal-2')" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img src="/images/triton.webp" alt="Triton's surface showing cantaloupe terrain and nitrogen geysers" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>Triton, Neptune's largest moon, displays a remarkably varied surface including the "cantaloupe terrain" — a unique pattern of dimples found nowhere else in the solar system. Active nitrogen geysers shoot material 8 km into the thin atmosphere.</p>
+          <p><strong>Surface temperature:</strong> -235°C (38 K)<br>
+          <strong>Diameter:</strong> 2,707 km<br>
+          <strong>Orbital direction:</strong> Retrograde</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('image-modal-2')">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Detail Modal 3 -->
+    <div class="modal-backdrop" id="image-modal-3" role="dialog" aria-modal="true" aria-labelledby="modal-title-3">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title-3">The Great Dark Spot</h2>
+          <button type="button" class="modal-close" onclick="closeModal('image-modal-3')" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img src="/images/great-dark-spot.webp" alt="Close-up of Neptune's Great Dark Spot storm with bright companion clouds" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>The Great Dark Spot was an Earth-sized storm system observed by Voyager 2. Accompanied by bright cirrus-like clouds of methane ice crystals, it rotated counterclockwise with wind speeds of up to 2,400 km/h — the fastest ever recorded in the solar system.</p>
+          <p><strong>Size:</strong> ~13,000 × 6,600 km<br>
+          <strong>Wind speed:</strong> Up to 2,400 km/h<br>
+          <strong>Status:</strong> Disappeared by 1994</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('image-modal-3')">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Detail Modal 4 -->
+    <div class="modal-backdrop" id="image-modal-4" role="dialog" aria-modal="true" aria-labelledby="modal-title-4">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title-4">Neptune's Ring System</h2>
+          <button type="button" class="modal-close" onclick="closeModal('image-modal-4')" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img src="/images/rings.webp" alt="Neptune's rings visible as thin bright arcs against the dark of space" style="border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <p>Neptune has five known rings, named after astronomers who contributed to the planet's study: Galle, Le Verrier, Lassell, Arago, and Adams. The Adams ring is notable for containing bright ring arcs — concentrated clumps of material.</p>
+          <p><strong>Number of rings:</strong> 5 main rings<br>
+          <strong>Composition:</strong> Ice particles and silicates<br>
+          <strong>Notable feature:</strong> Ring arcs in Adams ring</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('image-modal-4')">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule Observation Modal with Date Picker -->
+    <div class="modal-backdrop" id="schedule-modal" role="dialog" aria-modal="true" aria-labelledby="schedule-modal-title">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="schedule-modal-title">Schedule Observation</h2>
+          <button type="button" class="modal-close" onclick="closeModal('schedule-modal')" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="observer-name" class="form-label">Observer Name</label>
+            <input type="text" id="observer-name" class="form-input" placeholder="Your name">
+          </div>
+
+          <div class="form-group">
+            <label for="observation-date" class="form-label">Observation Date</label>
+            <input type="text" id="observation-date" class="form-input" placeholder="Select a date..." readonly>
+          </div>
+
+          <!-- Accessible Date Picker -->
+          <div class="date-picker" data-datepicker="observation-date" style="margin-top: 0.5rem;">
+            <div class="date-picker-header">
+              <button type="button" data-prev aria-label="Previous month">&#8249;</button>
+              <span class="date-picker-title"></span>
+              <button type="button" data-next aria-label="Next month">&#8250;</button>
+            </div>
+            <table class="date-picker-grid" role="grid" aria-label="">
+              <thead>
+                <tr>
+                  <th scope="col" abbr="Sunday">Su</th>
+                  <th scope="col" abbr="Monday">Mo</th>
+                  <th scope="col" abbr="Tuesday">Tu</th>
+                  <th scope="col" abbr="Wednesday">We</th>
+                  <th scope="col" abbr="Thursday">Th</th>
+                  <th scope="col" abbr="Friday">Fr</th>
+                  <th scope="col" abbr="Saturday">Sa</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <label for="observation-notes" class="form-label">Notes</label>
+            <textarea id="observation-notes" class="form-textarea" rows="3" placeholder="Target objects, equipment needed, etc."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('schedule-modal')">Cancel</button>
+          <button type="button" class="btn btn-primary" onclick="alert('Observation scheduled!'); closeModal('schedule-modal')">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </footer>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/components/date-picker.js"></script>
+</body>
+</html>

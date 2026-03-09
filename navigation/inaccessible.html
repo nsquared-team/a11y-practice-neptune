@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+  <style>
+    *:focus, *:focus-visible { outline: none !important; box-shadow: none !important; }
+    .version-banner a:focus-visible { outline: 2px solid currentColor !important; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <!-- No skip link -->
+
+  <div style="background: var(--color-neptune-surface); border-bottom: 1px solid var(--color-card-border); padding: 1rem 0; position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+      <a href="/home/inaccessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <div class="main-nav">
+        <ul>
+          <li><a href="/home/inaccessible.html">Home</a></li>
+          <li><a href="/forms/inaccessible.html">Forms</a></li>
+          <li><a href="/navigation/inaccessible.html" style="color: var(--color-text-primary); background: rgba(126, 184, 255, 0.1); border-radius: var(--radius-md);">Navigation</a></li>
+          <li><a href="/dialogs/inaccessible.html">Dialogs</a></li>
+          <li><a href="/data/inaccessible.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container" style="padding-top: 3rem; padding-bottom: 3rem; min-height: 60vh;">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Neptune Research Archives</h1>
+        <p>Browse our collection of research materials organized by topic. Use the navigation menus below to explore different research categories.</p>
+      </div>
+
+      <!-- Fake Breadcrumb — no nav landmark, no list, no aria-current, but links are tabbable -->
+      <div class="breadcrumb" style="margin-bottom: 2rem;">
+        <a href="/home/inaccessible.html" style="color: var(--color-text-secondary); text-decoration: none;">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--color-text-primary); font-weight: 500;">Research Archives</span>
+      </div>
+
+      <!-- Disclosure Navigation — hover-only menus, trigger is a span not a button, tabbable but no keyboard open/close -->
+      <div class="section">
+        <h2>Research Categories</h2>
+        <p>Explore research organized by topic area. Open each category to see available articles.</p>
+
+        <div class="disclosure-nav" style="margin-top: 1.5rem;">
+          <div class="disclosure-menu" data-fake-disclosure>
+            <span class="disclosure-trigger" tabindex="0" style="cursor: pointer;">
+              Atmosphere
+              <span class="disclosure-trigger-icon">▾</span>
+            </span>
+            <div class="disclosure-panel">
+              <a href="#">Cloud Layers & Composition</a>
+              <a href="#">Wind Speed Measurements</a>
+              <a href="#">The Great Dark Spot</a>
+              <a href="#">Methane Absorption Bands</a>
+              <a href="#">Atmospheric Temperature Profile</a>
+            </div>
+          </div>
+
+          <div class="disclosure-menu" data-fake-disclosure>
+            <span class="disclosure-trigger" tabindex="0" style="cursor: pointer;">
+              Moons
+              <span class="disclosure-trigger-icon">▾</span>
+            </span>
+            <div class="disclosure-panel">
+              <a href="#">Triton Overview</a>
+              <a href="#">Triton's Geysers</a>
+              <a href="#">Nereid's Eccentric Orbit</a>
+              <a href="#">Inner Moons: Proteus to Naiad</a>
+              <a href="#">Irregular Satellites</a>
+            </div>
+          </div>
+
+          <div class="disclosure-menu" data-fake-disclosure>
+            <span class="disclosure-trigger" tabindex="0" style="cursor: pointer;">
+              Rings
+              <span class="disclosure-trigger-icon">▾</span>
+            </span>
+            <div class="disclosure-panel">
+              <a href="#">Adams Ring & Arcs</a>
+              <a href="#">Le Verrier Ring</a>
+              <a href="#">Galle Ring</a>
+              <a href="#">Ring Composition Analysis</a>
+            </div>
+          </div>
+
+          <div class="disclosure-menu" data-fake-disclosure>
+            <span class="disclosure-trigger" tabindex="0" style="cursor: pointer;">
+              Missions
+              <span class="disclosure-trigger-icon">▾</span>
+            </span>
+            <div class="disclosure-panel">
+              <a href="#">Voyager 2 Flyby (1989)</a>
+              <a href="#">Hubble Observations</a>
+              <a href="#">JWST Discoveries</a>
+              <a href="#">Proposed Future Missions</a>
+            </div>
+          </div>
+
+          <div class="disclosure-menu" data-fake-disclosure>
+            <span class="disclosure-trigger" tabindex="0" style="cursor: pointer;">
+              Gallery
+              <span class="disclosure-trigger-icon">▾</span>
+            </span>
+            <div class="disclosure-panel">
+              <a href="#">Voyager 2 Images</a>
+              <a href="#">Hubble Telescope Photos</a>
+              <a href="#">JWST Infrared Views</a>
+              <a href="#">Artist Renderings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar layout — no <aside> landmark, no nav landmark, links are tabbable but no aria-current -->
+      <div class="layout-sidebar" style="margin-top: 3rem;">
+        <div>
+          <div class="sidebar-nav">
+            <div class="sidebar-nav-heading">Atmosphere</div>
+            <a href="#" style="color: var(--color-neptune-glow); background: rgba(126, 184, 255, 0.1);">Cloud Layers & Composition</a>
+            <a href="#">Wind Speed Measurements</a>
+            <a href="#">The Great Dark Spot</a>
+            <a href="#">Methane Absorption Bands</a>
+            <a href="#">Atmospheric Temperature Profile</a>
+
+            <div class="sidebar-nav-heading" style="margin-top: 1rem;">Related Topics</div>
+            <a href="#">Interior Structure</a>
+            <a href="#">Magnetic Field</a>
+            <a href="#">Seasonal Changes</a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Cloud Layers & Composition</h2>
+          <p>Neptune's atmosphere is composed primarily of hydrogen and helium, with traces of methane that give the planet its distinctive blue color. The atmosphere can be divided into several distinct layers, each with unique characteristics.</p>
+          <p>The uppermost cloud deck, composed of methane ice crystals, sits at pressures around 1-2 bar. Below this lies a layer of hydrogen sulfide and ammonia clouds. The deepest visible cloud layer likely consists of water ice and ammonia.</p>
+
+          <h3>Upper Atmosphere</h3>
+          <p>The thermosphere of Neptune reaches temperatures of approximately 750 K, far higher than can be explained by solar heating alone. This "energy crisis" remains one of the planet's enduring mysteries.</p>
+          <p>Methane in the upper atmosphere absorbs red light from the Sun, contributing to Neptune's blue appearance. At the same time, it undergoes photochemical reactions that produce a haze of hydrocarbon compounds.</p>
+
+          <h3>Troposphere</h3>
+          <p>The troposphere is Neptune's lowest atmospheric layer, where weather phenomena occur. Temperatures decrease with altitude in this region, from about 72 K at the 1-bar level to approximately 50 K at the tropopause.</p>
+          <p>Some of the most powerful storms in the solar system form in Neptune's troposphere. Wind speeds can exceed 2,100 km/h, making them the fastest measured on any planet.</p>
+
+          <h3>Key Findings</h3>
+          <ul style="color: var(--color-text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
+            <li>Methane concentration: approximately 2% in the upper atmosphere</li>
+            <li>Cloud top temperature: ~55 K (-218°C)</li>
+            <li>Atmospheric pressure at cloud tops: ~1 bar</li>
+            <li>Primary blue coloring agent: methane absorption of red wavelengths</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--color-neptune-surface); border-top: 1px solid var(--color-card-border); padding: 2rem 0; margin-top: 4rem; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </div>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/inaccessible/disclosure-menu.js"></script>
+</body>
+</html>

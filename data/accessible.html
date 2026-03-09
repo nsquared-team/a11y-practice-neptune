@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data — Neptune Observatory</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/version-switcher.css">
+  <link rel="icon" href="/images/neptune-icon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/home/accessible.html" class="site-logo">
+        <img src="/images/neptune-icon.svg" alt="" width="32" height="32">
+        Neptune Observatory
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/home/accessible.html">Home</a></li>
+          <li><a href="/forms/accessible.html">Forms</a></li>
+          <li><a href="/navigation/accessible.html">Navigation</a></li>
+          <li><a href="/dialogs/accessible.html">Dialogs</a></li>
+          <li><a href="/data/accessible.html" aria-current="page">Data</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h1>Neptune Data Center</h1>
+        <p>Explore detailed data about Neptune's moons, frequently asked questions, mission highlights, and scientific measurements.</p>
+      </div>
+
+      <!-- Data Table -->
+      <section class="section" aria-labelledby="moons-heading">
+        <h2 id="moons-heading">Neptune's Moons</h2>
+        <div class="data-table-wrapper" style="margin-top: 1.5rem;">
+          <table class="data-table">
+            <caption>Major and minor moons of Neptune with discovery details</caption>
+            <thead>
+              <tr>
+                <th scope="col" aria-sort="none">Name</th>
+                <th scope="col" aria-sort="none">Diameter (km)</th>
+                <th scope="col" aria-sort="none">Orbital Period (days)</th>
+                <th scope="col" aria-sort="none">Discovery Year</th>
+                <th scope="col">Discoverer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Triton</th>
+                <td>2,707</td>
+                <td>-5.877 (retrograde)</td>
+                <td>1846</td>
+                <td>William Lassell</td>
+              </tr>
+              <tr>
+                <th scope="row">Proteus</th>
+                <td>420</td>
+                <td>1.122</td>
+                <td>1989</td>
+                <td>Voyager 2</td>
+              </tr>
+              <tr>
+                <th scope="row">Nereid</th>
+                <td>340</td>
+                <td>360.13</td>
+                <td>1949</td>
+                <td>Gerard Kuiper</td>
+              </tr>
+              <tr>
+                <th scope="row">Larissa</th>
+                <td>194</td>
+                <td>0.555</td>
+                <td>1981</td>
+                <td>Harold Reitsema et al.</td>
+              </tr>
+              <tr>
+                <th scope="row">Galatea</th>
+                <td>176</td>
+                <td>0.429</td>
+                <td>1989</td>
+                <td>Voyager 2</td>
+              </tr>
+              <tr>
+                <th scope="row">Despina</th>
+                <td>150</td>
+                <td>0.335</td>
+                <td>1989</td>
+                <td>Voyager 2</td>
+              </tr>
+              <tr>
+                <th scope="row">Thalassa</th>
+                <td>80</td>
+                <td>0.311</td>
+                <td>1989</td>
+                <td>Voyager 2</td>
+              </tr>
+              <tr>
+                <th scope="row">Naiad</th>
+                <td>60</td>
+                <td>0.294</td>
+                <td>1989</td>
+                <td>Voyager 2</td>
+              </tr>
+              <tr>
+                <th scope="row">Hippocamp</th>
+                <td>34</td>
+                <td>0.950</td>
+                <td>2013</td>
+                <td>Mark Showalter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <section class="section" aria-labelledby="planet-data-heading">
+        <h2 id="planet-data-heading">Planet Data</h2>
+        <div class="tabs-container" data-tabs style="margin-top: 1.5rem;">
+          <div class="tab-list" role="tablist" aria-label="Neptune data categories">
+            <button role="tab" id="tab-overview" class="tab-item" aria-selected="true" aria-controls="panel-overview" tabindex="0">Overview</button>
+            <button role="tab" id="tab-atmosphere" class="tab-item" aria-selected="false" aria-controls="panel-atmosphere" tabindex="-1">Atmosphere</button>
+            <button role="tab" id="tab-orbit" class="tab-item" aria-selected="false" aria-controls="panel-orbit" tabindex="-1">Orbital Mechanics</button>
+            <button role="tab" id="tab-interior" class="tab-item" aria-selected="false" aria-controls="panel-interior" tabindex="-1">Interior</button>
+          </div>
+          <div role="tabpanel" id="panel-overview" class="tab-panel" aria-labelledby="tab-overview">
+            <h3>Neptune Overview</h3>
+            <p>Neptune is the eighth and farthest known planet from the Sun in the Solar System. It is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus.</p>
+            <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+              <li><strong>Equatorial radius:</strong> 24,764 km</li>
+              <li><strong>Mass:</strong> 1.024 × 10²⁶ kg (17.15 Earth masses)</li>
+              <li><strong>Surface gravity:</strong> 11.15 m/s²</li>
+              <li><strong>Number of known moons:</strong> 16</li>
+              <li><strong>Ring system:</strong> 5 main rings</li>
+            </ul>
+          </div>
+          <div role="tabpanel" id="panel-atmosphere" class="tab-panel" aria-labelledby="tab-atmosphere" hidden>
+            <h3>Atmospheric Composition</h3>
+            <p>Neptune's atmosphere is composed primarily of hydrogen and helium, along with traces of hydrocarbons and possibly nitrogen. It contains a higher proportion of ices such as water, ammonia, and methane compared to Jupiter and Saturn.</p>
+            <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+              <li><strong>Hydrogen (H₂):</strong> 80 ± 3.2%</li>
+              <li><strong>Helium (He):</strong> 19 ± 3.2%</li>
+              <li><strong>Methane (CH₄):</strong> 1.5 ± 0.5%</li>
+              <li><strong>Hydrogen deuteride (HD):</strong> ~0.019%</li>
+              <li><strong>Ethane (C₂H₆):</strong> ~0.00015%</li>
+            </ul>
+          </div>
+          <div role="tabpanel" id="panel-orbit" class="tab-panel" aria-labelledby="tab-orbit" hidden>
+            <h3>Orbital Mechanics</h3>
+            <p>Neptune orbits the Sun at an average distance of 30.07 AU (4.5 billion km). Its orbital period is approximately 164.8 Earth years, meaning it has completed just one full orbit since its discovery in 1846.</p>
+            <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+              <li><strong>Semi-major axis:</strong> 30.07 AU</li>
+              <li><strong>Orbital period:</strong> 164.8 years</li>
+              <li><strong>Orbital eccentricity:</strong> 0.0086</li>
+              <li><strong>Orbital inclination:</strong> 1.77°</li>
+              <li><strong>Average orbital speed:</strong> 5.43 km/s</li>
+            </ul>
+          </div>
+          <div role="tabpanel" id="panel-interior" class="tab-panel" aria-labelledby="tab-interior" hidden>
+            <h3>Interior Structure</h3>
+            <p>Neptune's internal structure resembles that of Uranus. The planet likely has a rocky core composed of silicates and iron-nickel, surrounded by a mantle of water, methane, and ammonia ices. The mantle may contain a vast ocean of super-hot, electrically conductive water.</p>
+            <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+              <li><strong>Core mass:</strong> ~1.2 Earth masses</li>
+              <li><strong>Core temperature:</strong> ~5,400 K</li>
+              <li><strong>Core pressure:</strong> ~7 Mbar</li>
+              <li><strong>Mantle composition:</strong> Water, methane, ammonia ices</li>
+              <li><strong>Magnetic field tilt:</strong> 47° from rotational axis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+      <section class="section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="accordion" data-accordion style="margin-top: 1.5rem;">
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">
+                Why is Neptune blue?
+                <svg class="accordion-trigger-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-trigger" hidden>
+              <p>Neptune's blue color is the result of methane in the atmosphere absorbing red wavelengths of sunlight and reflecting blue wavelengths back into space. However, methane alone doesn't fully explain the vivid blue — an unknown atmospheric component likely contributes to the deeper coloration compared to Uranus.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
+                How far is Neptune from Earth?
+                <svg class="accordion-trigger-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-2" role="region" hidden>
+              <p>The distance between Earth and Neptune varies significantly due to their different orbital positions. At its closest approach (opposition), Neptune is about 4.3 billion km (28.8 AU) from Earth. At its farthest, the distance can reach about 4.7 billion km (31.3 AU). Light takes approximately 4 hours to travel from Neptune to Earth.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
+                Has any spacecraft visited Neptune?
+                <svg class="accordion-trigger-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-3" role="region" hidden>
+              <p>Only one spacecraft has visited Neptune: Voyager 2, which made its closest approach on August 25, 1989. During its flyby, Voyager 2 discovered six new moons, observed Neptune's ring system, and studied the planet's atmosphere and magnetic field. No dedicated Neptune mission has been launched since, though several have been proposed.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">
+                What are Neptune's winds like?
+                <svg class="accordion-trigger-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-4" role="region" hidden>
+              <p>Neptune has the fastest winds in the solar system, reaching speeds of up to 2,100 km/h (580 m/s). These winds blow primarily in a direction opposite to the planet's rotation (westward). The source of energy driving these extreme winds remains a puzzle, as Neptune receives very little solar energy due to its distance from the Sun.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">
+                Could there be life on Neptune?
+                <svg class="accordion-trigger-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-5" role="region" hidden>
+              <p>Neptune itself is extremely unlikely to harbor life as we know it, due to extreme temperatures, pressures, and lack of a solid surface. However, its moon Triton is of some interest — with active geysers, a thin atmosphere, and a subsurface ocean possibly maintained by tidal heating, Triton could theoretically have environments where simple life might exist.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel -->
+      <section class="section" aria-labelledby="missions-heading">
+        <h2 id="missions-heading">Mission Highlights</h2>
+        <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Neptune mission highlights" style="margin-top: 1.5rem;">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                <h3>Voyager 2 Launch</h3>
+                <p>Launched on August 20, 1977, Voyager 2 embarked on a grand tour of the outer solar system. It would take 12 years to reach Neptune, traveling over 4.4 billion kilometers through space. The spacecraft carried instruments to study planetary atmospheres, magnetic fields, and ring systems.</p>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                <h3>Neptune Encounter</h3>
+                <p>On August 25, 1989, Voyager 2 made its closest approach to Neptune, passing just 4,951 km above the cloud tops. During the encounter, it discovered the Great Dark Spot, measured wind speeds exceeding 2,000 km/h, and detected Neptune's magnetic field tilted 47° from the rotation axis.</p>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                <h3>Triton Flyby</h3>
+                <p>Shortly after Neptune, Voyager 2 flew past Triton at a distance of just 40,000 km. It revealed a geologically young surface with active nitrogen geysers, the cantaloupe terrain, and a thin nitrogen atmosphere. Surface temperature was measured at just 38 K (-235°C).</p>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                <h3>JWST Observations</h3>
+                <p>In 2022, the James Webb Space Telescope captured the clearest images of Neptune's rings in over 30 years. JWST's infrared instruments revealed previously unseen cloud bands and provided new data about atmospheric methane, offering insights that ground-based telescopes cannot achieve.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous slide">&#8249;</button>
+            <button type="button" class="carousel-btn" data-carousel-pause aria-label="Pause automatic slide rotation">⏸</button>
+            <div class="carousel-indicators">
+              <button type="button" class="carousel-dot active" aria-label="Go to slide 1" aria-current="true"></button>
+              <button type="button" class="carousel-dot" aria-label="Go to slide 2"></button>
+              <button type="button" class="carousel-dot" aria-label="Go to slide 3"></button>
+              <button type="button" class="carousel-dot" aria-label="Go to slide 4"></button>
+            </div>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Next slide">&#8250;</button>
+          </div>
+          <div aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Neptune Observatory. A keyboard accessibility testing resource.</p>
+    </div>
+  </footer>
+
+  <script src="/js/version-switcher.js"></script>
+  <script src="/js/components/tabs.js"></script>
+  <script src="/js/components/accordion.js"></script>
+  <script src="/js/components/carousel.js"></script>
+</body>
+</html>
