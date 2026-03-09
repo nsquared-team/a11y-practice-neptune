@@ -9,8 +9,15 @@
   <link rel="stylesheet" href="/css/version-switcher.css">
   <link rel="icon" href="/images/neptune-icon.svg">
   <style>
-    *:focus, *:focus-visible { outline: none !important; box-shadow: none !important; }
-    .version-banner a:focus-visible { outline: 2px solid currentColor !important; outline-offset: 2px; }
+    div[tabindex]:focus, div[tabindex]:focus-visible,
+    span[tabindex]:focus, span[tabindex]:focus-visible,
+    .btn:focus, .btn:focus-visible,
+    .gallery-item:focus, .gallery-item:focus-visible,
+    .modal-close:focus, .modal-close:focus-visible,
+    .date-picker-nav:focus, .date-picker-nav:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   </style>
 </head>
 <body>
