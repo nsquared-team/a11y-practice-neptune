@@ -45,10 +45,10 @@
             <caption>Major and minor moons of Neptune with discovery details</caption>
             <thead>
               <tr>
-                <th scope="col" aria-sort="none">Name</th>
-                <th scope="col" aria-sort="none">Diameter (km)</th>
-                <th scope="col" aria-sort="none">Orbital Period (days)</th>
-                <th scope="col" aria-sort="none">Discovery Year</th>
+                <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort-col="0" data-sort-type="string">Name</button></th>
+                <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort-col="1" data-sort-type="number">Diameter (km)</button></th>
+                <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort-col="2" data-sort-type="number">Orbital Period (days)</button></th>
+                <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort-col="3" data-sort-type="number">Discovery Year</button></th>
                 <th scope="col">Discoverer</th>
               </tr>
             </thead>
@@ -288,6 +288,7 @@
   </footer>
 
   <script src="/js/version-switcher.js"></script>
+  <script src="/js/components/sortable-table.js"></script>
   <script src="/js/components/tabs.js"></script>
   <script src="/js/components/accordion.js"></script>
   <script src="/js/components/carousel.js"></script>

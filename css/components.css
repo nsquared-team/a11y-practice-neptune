@@ -421,25 +421,44 @@
 }
 
 .data-table th[aria-sort] {
-  cursor: pointer;
+  padding: 0;
 }
 
-.data-table th[aria-sort]::after {
-  margin-left: 0.5rem;
+.sort-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.sort-btn::after {
   font-size: 0.75rem;
 }
 
-.data-table th[aria-sort="ascending"]::after {
+th[aria-sort="ascending"] .sort-btn::after {
   content: '▲';
 }
 
-.data-table th[aria-sort="descending"]::after {
+th[aria-sort="descending"] .sort-btn::after {
   content: '▼';
 }
 
-.data-table th[aria-sort="none"]::after {
+th[aria-sort="none"] .sort-btn::after {
   content: '↕';
   opacity: 0.4;
+}
+
+.sort-btn:hover {
+  background: rgba(126, 184, 255, 0.1);
 }
 
 /* Fake table (div-based for inaccessible version) */
@@ -482,11 +501,23 @@
 .accordion {
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 
 .accordion-item {
   border-bottom: 1px solid var(--color-card-border);
+}
+
+.accordion-item:first-child .accordion-trigger {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.accordion-item:last-child .accordion-trigger {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.accordion-item:last-child .accordion-trigger[aria-expanded="true"],
+.accordion-item:last-child .accordion-trigger.expanded {
+  border-radius: 0;
 }
 
 .accordion-item:last-child {
